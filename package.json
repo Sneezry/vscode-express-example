@@ -36,11 +36,11 @@
     },
     "devDependencies": {
         "typescript": "^2.6.1",
-        "vscode": "^1.1.21",
+        "vscode": "^1.1.30",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
     },
     "dependencies": {
-        "vscode-express": "^0.1.6"
+        "vscode-express": "^1.0.0"
     }
 }

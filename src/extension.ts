@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
-    console.log('Congratulations, your extension "hello" is now active!');
+    // console.log('Congratulations, your extension "hello" is now active!');
 
     const vscexpress = new VSCExpress(context, 'view');
 
@@ -27,6 +27,9 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposable);
     context.subscriptions.push(vscode.commands.registerCommand('extension.vscexpress', () => {
         vscexpress.open('index.html', 'VS Code Express Example', vscode.ViewColumn.One);
+    }));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.vscexpressclose', (path: string) => {
+        vscexpress.close(path);
     }));
 }
 
